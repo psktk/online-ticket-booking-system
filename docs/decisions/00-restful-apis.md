@@ -89,9 +89,17 @@ Chosen option: **2. Calculate available_quantity dynamically from bookings**
 - `POST /register` — Register new user
 - `POST /login` — Login, returns JWT
 
+### Venues
+
+- `GET /venues` — List all venues
+- `GET /venues/:id` — Get venue details
+- `POST /venues` — (Admin) Create venue
+- `PUT /venues/:id` — (Admin) Update venue
+- `DELETE /venues/:id` — (Admin) Delete venue
+
 ### Events
 
-- `GET /events` — List all events (summary)
+- `GET /events` — List all events
 - `GET /events/:id` — Get event details
 - `POST /events` — (Admin) Create event
 - `PUT /events/:id` — (Admin) Update event

@@ -9,6 +9,13 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
+type Venue struct {
+	ID       int    `json:"id"`
+	Name     string `json:"name"`
+	Address  string `json:"address"`
+	Capacity int    `json:"capacity"`
+}
+
 // Event represents a concert event
 type Event struct {
 	ID          int       `json:"id"`
@@ -18,6 +25,39 @@ type Event struct {
 	Date        time.Time `json:"date"`
 	Price       float64   `json:"price"`
 	ImageURL    string    `json:"image_url"`
+}
+
+var mockVenues = []Venue{
+	{
+		ID:       1,
+		Name:     "Madison Square Garden",
+		Address:  "4 Pennsylvania Plaza, New York, NY 10001",
+		Capacity: 20000,
+	},
+	{
+		ID:       2,
+		Name:     "Royal Albert Hall",
+		Address:  "Kensington Gore, London SW7 2AP, United Kingdom",
+		Capacity: 5272,
+	},
+	{
+		ID:       3,
+		Name:     "Wembley Stadium",
+		Address:  "London HA9 0WS, United Kingdom",
+		Capacity: 90000,
+	},
+	{
+		ID:       4,
+		Name:     "The O2 Arena",
+		Address:  "Peninsula Square, London SE10 0DX, United Kingdom",
+		Capacity: 20000,
+	},
+	{
+		ID:       5,
+		Name:     "MetLife Stadium",
+		Address:  "1 MetLife Stadium Dr, East Rutherford, NJ 07073",
+		Capacity: 82500,
+	},
 }
 
 // Mock data for events
@@ -129,6 +169,13 @@ func main() {
 	// Health check endpoint
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
+	})
+
+	r.GET("/venues", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"data":    mockVenues,
+			"message": "Venues retrieved successfully",
+		})
 	})
 
 	// Event routes

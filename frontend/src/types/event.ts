@@ -6,7 +6,6 @@ export interface Event {
   date: string;
   price: number;
   image_url: string;
-  category: string;
 }
 
 export interface EventsResponse {

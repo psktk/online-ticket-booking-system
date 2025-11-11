@@ -29,9 +29,6 @@ export function EventCard({ event }: EventCardProps) {
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute top-2 right-2 bg-white px-2 py-1 rounded-full text-xs font-medium text-gray-800">
-          {event.category}
-        </div>
       </div>
 
       <div className="p-4">

@@ -18,7 +18,6 @@ type Event struct {
 	Date        time.Time `json:"date"`
 	Price       float64   `json:"price"`
 	ImageURL    string    `json:"image_url"`
-	Category    string    `json:"category"`
 }
 
 // Mock data for events
@@ -31,7 +30,6 @@ var mockEvents = []Event{
 		Date:        time.Date(2025, 12, 15, 20, 0, 0, 0, time.UTC),
 		Price:       150.00,
 		ImageURL:    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500",
-		Category:    "Pop",
 	},
 	{
 		ID:          2,
@@ -41,7 +39,6 @@ var mockEvents = []Event{
 		Date:        time.Date(2025, 11, 28, 19, 30, 0, 0, time.UTC),
 		Price:       95.00,
 		ImageURL:    "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=500",
-		Category:    "Pop",
 	},
 	{
 		ID:          3,
@@ -51,7 +48,6 @@ var mockEvents = []Event{
 		Date:        time.Date(2025, 12, 5, 21, 0, 0, 0, time.UTC),
 		Price:       120.00,
 		ImageURL:    "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500",
-		Category:    "Rock",
 	},
 	{
 		ID:          4,
@@ -61,7 +57,6 @@ var mockEvents = []Event{
 		Date:        time.Date(2025, 11, 20, 20, 30, 0, 0, time.UTC),
 		Price:       85.00,
 		ImageURL:    "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=500",
-		Category:    "Alternative",
 	},
 	{
 		ID:          5,
@@ -71,7 +66,6 @@ var mockEvents = []Event{
 		Date:        time.Date(2025, 12, 22, 20, 0, 0, 0, time.UTC),
 		Price:       110.00,
 		ImageURL:    "https://images.unsplash.com/photo-1571974599782-87624638275c?w=500",
-		Category:    "R&B",
 	},
 }
 
